@@ -1,0 +1,100 @@
+site_name: Sparkive
+site_description: Tom Olsen's lessons on algorithms, mathematics, and physics
+site_url: https://tom-olsen.github.io/sparkive/
+site_author: Tom Olsen
+repo_url: https://github.com/Tom-Olsen/sparkive
+repo_name: Tom-Olsen/sparkive
+docs_dir: docs
+
+hooks:
+  - hooks.py
+
+watch:
+  - brand/sparkive-logo.svg
+  - brand/ember-logo.svg
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/sparkive.css
+  - stylesheets/bitonic-sort-graph.css
+
+extra:
+  header_links:
+    - name: Portfolio
+      url: https://tom-olsen.github.io/Tom-Olsen/
+      icon: material/account-circle-outline
+    - name: GitHub
+      url: https://github.com/Tom-Olsen
+      icon: fontawesome/brands/github
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/dr-tom-olsen-a1a793238/
+      icon: fontawesome/brands/linkedin
+    - name: Ember
+      url: https://tom-olsen.github.io/Ember/
+      logo: true
+
+extra_javascript:
+  - javascripts/sparkive-header.js
+  - javascripts/bitonic-sort-graph.js
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        index.md: home/index.md
+        algorithms/index.md: computerScience/index.md
+        algorithms/bitonic-sort.md: computerScience/bitonicSort/index.md
+        physics/smoothed-particle-hydrodynamics.md: physics/smoothedParticleHydrodynamics/index.md
+        physics/lattice-boltzmann-method.md: physics/latticeBoltzmannMethod/index.md
+
+nav:
+  - Home: home/index.md
+  - Computer Science:
+      - computerScience/index.md
+      - Bitonic Sort: computerScience/bitonicSort/index.md
+  - Math: math/index.md
+  - Physics:
+      - physics/index.md
+      - Smoothed Particle Hydrodynamics: physics/smoothedParticleHydrodynamics/index.md
+      - Lattice Boltzmann Method: physics/latticeBoltzmannMethod/index.md

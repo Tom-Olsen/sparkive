@@ -1,0 +1,31 @@
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <div class="sparkive-header-layout md-grid">
+    {% include "partials/tabs.html" %}
+    <nav class="md-header__inner sparkive-header-controls" aria-label="{{ lang.t('header') }}">
+      <label class="md-header__button md-icon" for="__drawer" aria-label="Open section navigation" title="Open section navigation">
+        {% set icon = config.theme.icon.menu or "material/menu" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      {% include "partials/palette.html" %}
+      {% include "partials/javascripts/palette.html" %}
+      {% if "material/search" in config.plugins %}
+        {% set search = config.plugins["material/search"] | attr("config") %}
+        {% if search.enabled %}
+          <label class="md-header__button md-icon" for="__search" aria-label="{{ lang.t('search') }}">
+            {% set icon = config.theme.icon.search or "material/magnify" %}
+            {% include ".icons/" ~ icon ~ ".svg" %}
+          </label>
+          {% include "partials/search.html" %}
+        {% endif %}
+      {% endif %}
+      <div class="sparkive-header-links" role="group" aria-label="More from Tom Olsen">
+        {% for link in config.extra.header_links %}
+          <a class="sparkive-header-link" href="{{ link.url | e }}" target="_blank" rel="noopener noreferrer" aria-label="{{ link.name | e }} (opens in a new tab)" title="{{ link.name | e }}">
+            <span class="md-icon{% if link.logo %} sparkive-header-link-logo{% endif %}" aria-hidden="true">{% if link.logo %}{{ emberLogoSvg | safe }}{% else %}{% include ".icons/" ~ link.icon ~ ".svg" %}{% endif %}</span>
+            <span class="sparkive-header-link-label">{{ link.name }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>
