@@ -1,6 +1,6 @@
 # Sparkive
 
-Archive of things that spark my interest: lessons on algorithms, mathematics, physics, and other topics I enjoy learning.
+Archive of things that spark my interest: lessons on computer science, mathematics, and physics.
 
 Website: [tom-olsen.github.io/sparkive](https://tom-olsen.github.io/sparkive/)
 
@@ -25,14 +25,14 @@ Run `.venv/bin/python -m mkdocs build --strict --config-file mkwebsite.yml` befo
 - `content/home/index.md` is the Home landing page; the site root redirects here.
 - `content/computerScience/index.md` is the Computer Science landing page; lessons live in subfolders such as `content/computerScience/bitonicSort/index.md`.
 - `content/math/index.md` is the Math landing page, currently marked as planned.
-- `content/physics/index.md` is the Physics landing page; its lessons live in `smoothedParticleHydrodynamics/index.md` and `latticeBoltzmannMethod/index.md` beneath that folder.
+- `content/physics/index.md` is the Physics landing page; its lessons live in `kineticTheory/index.md`, `smoothedParticleHydrodynamics/index.md`, and `latticeBoltzmannMethod/index.md` beneath that folder.
 - `content/javascripts/` and `content/stylesheets/` contain lesson visualizations and math configuration.
 - `mkwebsite.yml` defines the site, extensions, theme modes, header links, and explicit navigation.
 - `overrides/` contains the header and navigation templates, matching Ember's layout and scrolling behavior.
 
 Each top-level section has its own folder and `index.md`. Each lesson has a camelCase subfolder with its own `index.md`, matching Ember's page layout. Redirects in `mkwebsite.yml` preserve previous page URLs.
 
-The initial lessons and sorting-network visualization were moved from Ember. Bitonic Sort is in progress; the two physics lessons are currently placeholders. Math has a section landing page; its lessons are planned.
+The initial lessons and sorting-network visualization were moved from Ember. Bitonic Sort and Kinetic Theory are in progress; the other two physics lessons are currently placeholders. Math has a section landing page; its lessons are planned.
 
 ## GitHub Pages
 

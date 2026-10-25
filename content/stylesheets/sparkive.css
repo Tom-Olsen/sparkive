@@ -270,3 +270,9 @@
     background-color: var(--md-typeset-a-color);
     color: var(--md-default-bg-color);
 }
+
+.md-typeset .md-button.sparkive-explore-button {
+    border-color: var(--md-primary-fg-color);
+    background-color: var(--md-primary-fg-color);
+    color: #ffffff;
+}

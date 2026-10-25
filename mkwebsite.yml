@@ -1,5 +1,5 @@
 site_name: Sparkive
-site_description: Tom Olsen's lessons on algorithms, mathematics, and physics
+site_description: Tom Olsen's lessons on computer science, mathematics, and physics
 site_url: https://tom-olsen.github.io/sparkive/
 site_author: Tom Olsen
 repo_url: https://github.com/Tom-Olsen/sparkive
@@ -83,8 +83,7 @@ plugins:
   - redirects:
       redirect_maps:
         index.md: home/index.md
-        algorithms/index.md: computerScience/index.md
-        algorithms/bitonic-sort.md: computerScience/bitonicSort/index.md
+        computerScience/bitonic-sort.md: computerScience/bitonicSort/index.md
         physics/smoothed-particle-hydrodynamics.md: physics/smoothedParticleHydrodynamics/index.md
         physics/lattice-boltzmann-method.md: physics/latticeBoltzmannMethod/index.md
 
@@ -96,5 +95,6 @@ nav:
   - Math: math/index.md
   - Physics:
       - physics/index.md
+      - Kinetic Theory: physics/kineticTheory/index.md
       - Smoothed Particle Hydrodynamics: physics/smoothedParticleHydrodynamics/index.md
       - Lattice Boltzmann Method: physics/latticeBoltzmannMethod/index.md

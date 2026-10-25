@@ -2,7 +2,7 @@
 
 ## Purpose and boundaries
 
-- Sparkive is Tom Olsen's standalone learning site about algorithms, mathematics, physics, and other topics.
+- Sparkive is Tom Olsen's standalone learning site about computer science, mathematics, and physics.
 - Write lessons that explain intuition, prerequisites, definitions, assumptions, derivations or proofs, worked examples, and limitations as appropriate. Do not skip important reasoning steps.
 - Keep general explanations here. Ember-specific architecture and feature demonstrations belong in the Ember repository; link to them where relevant.
 - Preserve existing lesson content and interactive visualizations when reorganizing pages. Clearly identify unfinished lessons; do not invent claims about the author.
@@ -12,7 +12,6 @@
 - The site uses Material for MkDocs. `mkwebsite.yml` defines metadata, Markdown extensions, assets, and explicit navigation.
 - Top-level sections have their own folders: `content/home/`, `content/computerScience/`, `content/math/`, and `content/physics/`. Each section landing page is its folder's `index.md`; `content/home/index.md` is the home page.
 - Each lesson has a camelCase subfolder containing `index.md`, such as `content/computerScience/bitonicSort/index.md` or `content/physics/latticeBoltzmannMethod/index.md`, matching Ember's page layout.
-- Preserve redirects in `mkwebsite.yml` from the site root and previous lesson URLs when moving pages.
 - Add new pages to `nav` in `mkwebsite.yml`. Add subject sections when there is content for them.
 - Keep lesson-specific JavaScript and CSS in `content/javascripts/` and `content/stylesheets/`.
 - Math uses the arithmatex extension and MathJax; preserve their configuration when moving lessons.
