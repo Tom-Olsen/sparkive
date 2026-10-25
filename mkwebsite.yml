@@ -4,7 +4,7 @@ site_url: https://tom-olsen.github.io/sparkive/
 site_author: Tom Olsen
 repo_url: https://github.com/Tom-Olsen/sparkive
 repo_name: Tom-Olsen/sparkive
-docs_dir: docs
+docs_dir: content
 
 hooks:
   - hooks.py

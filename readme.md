@@ -9,8 +9,8 @@ Website: [tom-olsen.github.io/sparkive](https://tom-olsen.github.io/sparkive/)
 Sparkive is a standalone Material for MkDocs site. It does not depend on an Ember checkout.
 
 ```sh
-python3 -m venv .venv-docs
-.venv-docs/bin/python -m pip install -r requirements-docs.txt
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
 ./preview.sh
 ```
 
@@ -18,19 +18,19 @@ The preview script opens Firefox at `http://127.0.0.1:8001/sparkive/` and reload
 
 The script works from any current directory and forwards MkDocs options. To choose another port, run `./preview.sh --dev-addr 127.0.0.1:8002`.
 
-Run `.venv-docs/bin/python -m mkdocs build --strict` before publishing. Generated output is written to `site/` and is ignored by Git.
+Run `.venv/bin/python -m mkdocs build --strict --config-file mkwebsite.yml` before publishing. Generated output is written to `site/` and is ignored by Git.
 
 ## Content
 
-- `docs/home/index.md` is the Home landing page; the site root redirects here.
-- `docs/computerScience/index.md` is the Computer Science landing page; lessons live in subfolders such as `docs/computerScience/bitonicSort/index.md`.
-- `docs/math/index.md` is the Math landing page, currently marked as planned.
-- `docs/physics/index.md` is the Physics landing page; its lessons live in `smoothedParticleHydrodynamics/index.md` and `latticeBoltzmannMethod/index.md` beneath that folder.
-- `docs/javascripts/` and `docs/stylesheets/` contain lesson visualizations and math configuration.
-- `mkdocs.yml` defines the site, extensions, theme modes, header links, and explicit navigation.
+- `content/home/index.md` is the Home landing page; the site root redirects here.
+- `content/computerScience/index.md` is the Computer Science landing page; lessons live in subfolders such as `content/computerScience/bitonicSort/index.md`.
+- `content/math/index.md` is the Math landing page, currently marked as planned.
+- `content/physics/index.md` is the Physics landing page; its lessons live in `smoothedParticleHydrodynamics/index.md` and `latticeBoltzmannMethod/index.md` beneath that folder.
+- `content/javascripts/` and `content/stylesheets/` contain lesson visualizations and math configuration.
+- `mkwebsite.yml` defines the site, extensions, theme modes, header links, and explicit navigation.
 - `overrides/` contains the header and navigation templates, matching Ember's layout and scrolling behavior.
 
-Each top-level section has its own folder and `index.md`. Each lesson has a camelCase subfolder with its own `index.md`, matching Ember's page layout. Redirects in `mkdocs.yml` preserve previous page URLs.
+Each top-level section has its own folder and `index.md`. Each lesson has a camelCase subfolder with its own `index.md`, matching Ember's page layout. Redirects in `mkwebsite.yml` preserve previous page URLs.
 
 The initial lessons and sorting-network visualization were moved from Ember. Bitonic Sort is in progress; the two physics lessons are currently placeholders. Math has a section landing page; its lessons are planned.
 
